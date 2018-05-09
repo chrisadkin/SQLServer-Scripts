@@ -10,7 +10,7 @@ data (the destination) from another (the source).
 .EXAMPLE
 # Refresh a single database from a snapshot belonging to the volume specified by the RefreshSource parameter
 $Targets = @("Z-STN-WIN2016-A\DEVOPSTST")
-Refresh-Dev-PsFunc-V2 -Database        tpch-no-compression `
+Refresh-Dev-PsFunc -Database           tpch-no-compression `
                    -RefreshSource      z-sql2016-devops-prd `
                    -DestSqlInstance    $Targets `
                    -PfaEndpoint        10.225.112.10 `
@@ -21,7 +21,7 @@ Refresh-Dev-PsFunc-V2 -Database        tpch-no-compression `
 .EXAMPLE
 # Refresh a multiple databases from a snapshot belonging to the volume specified by the RefreshSource parameter
 $Targets = @("Z-STN-WIN2016-A\DEVOPSTST", "Z-STN-WIN2016-A\DEVOPSDEV")
-Refresh-Dev-PsFunc-V2 -Database        tpch-no-compression `
+Refresh-Dev-PsFunc -Database           tpch-no-compression `
                    -RefreshSource      z-sql2016-devops-prd `
                    -DestSqlInstance    $Targets `
                    -PfaEndpoint        10.225.112.10 `
@@ -32,7 +32,7 @@ Refresh-Dev-PsFunc-V2 -Database        tpch-no-compression `
 .EXAMPLE
 # Refresh a single database from a snapshot of the database specified by the RefreshSource parameter
 $Targets = @("Z-STN-WIN2016-A\DEVOPSTST")
-Refresh-Dev-PsFunc-V2 -Database        tpch-no-compression `
+Refresh-Dev-PsFunc -Database           tpch-no-compression `
                    -RefreshSource      Z-STN-WIN2016-A\DEVOPSPRD `
                    -DestSqlInstance    $Targets `
                    -PfaEndpoint        10.225.112.10 `
@@ -42,7 +42,7 @@ Refresh-Dev-PsFunc-V2 -Database        tpch-no-compression `
 .EXAMPLE
 # Refresh a multiple databases from the database specified by the RefreshSource parameter
 $Targets = @("Z-STN-WIN2016-A\DEVOPSTST", "Z-STN-WIN2016-A\DEVOPSDEV")
-Refresh-Dev-PsFunc-V2 -Database        tpch-no-compression `
+Refresh-Dev-PsFunc -Database           tpch-no-compression `
                    -RefreshSource      z-sql2016-devops-prd `
                    -DestSqlInstance    $Targets `
                    -PfaEndpoint        10.225.112.10 `
